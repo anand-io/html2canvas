@@ -1,5 +1,6 @@
 function VideoContainer(imageData) {
-  this.src = imageData.args[0].src;
+  var src = imageData.args[0].src || imageData.args[0].srcObject;
+  this.src = src
 
   // Adding index to identify the video element as <video> can have multiple child <source>.
   this.videoIndex = imageData.videoIndex;

@@ -36,6 +36,8 @@ function cloneNode(node, javascriptEnabled) {
             cloneCanvasContents(node, clone);
         } else if (node.nodeName === "TEXTAREA" || node.nodeName === "SELECT") {
             clone.value = node.value;
+        } else if (node.srcObject) {
+            clone.srcObject = node.srcObject
         }
     }
 
